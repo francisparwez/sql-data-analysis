@@ -1,0 +1,26 @@
+# SQL Server / project outputs
+*.log
+*.bak
+*.trn
+
+# Temporary and editor files
+*.tmp
+*.temp
+*~
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Python files, if helper scripts are added later
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Jupyter, if notebooks are added later
+.ipynb_checkpoints/
+
+# Note:
+# Keep the project CSV dataset tracked unless you decide to exclude it.
