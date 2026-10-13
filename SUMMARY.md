@@ -12,6 +12,7 @@ Use T-SQL queries to retrieve, filter, group, and summarise data to answer pract
 - Imported the CSV using `BULK INSERT`.
 - SQL Server reported **1,200 rows affected**.
 - Added initial queries to count records, preview data, inspect table structure, check duplicate and missing `OrderID` values, and validate `TotalPrice` against `Quantity * UnitPrice`.
+- Verified that the record count is 1,200 and the column count is 14.
 
 ## Current Project Structure
 
@@ -21,7 +22,8 @@ sql-data-analysis/
 │   └── input/
 │       └── cleaned_dataset.csv
 ├── sql/
-│   └── 01-creating-db__schema__data-insertion.sql
+│   ├── 01-creating-db__schema__data-insertion.sql
+│   └── 02-basic-sql-queries.sql
 ├── .gitignore
 ├── CHANGE_LOG.md
 ├── README.md
@@ -37,14 +39,24 @@ sql-data-analysis/
 
 ## Next Steps
 
-1. Verify the outputs of the initial validation queries.
-2. Practise basic `SELECT` queries.
-3. Filter and sort data using `WHERE` and `ORDER BY`.
-4. Group and summarise records using `GROUP BY` and aggregate functions.
-5. Use `HAVING` and calculate percentage contributions.
-6. Answer business questions and document the findings.
-7. Complete final quality checks and update the project documentation.
+1. Filter records using `WHERE`.
+2. Sort query results using `ORDER BY`.
+3. Group and summarise records using `GROUP BY` and aggregate functions.
+4. Use `HAVING` and calculate percentage contributions.
+5. Answer business questions and document the findings.
+6. Complete final quality checks and update the project documentation.
 
 ## Important Note
 
 The `BULK INSERT` statement currently uses a local Windows path. Anyone running the script on another computer must update that path and ensure that the SQL Server service account can access the CSV file.
+
+## Completed Work — Task 3: Basic SQL Queries
+
+- Retrieved all columns using `SELECT *`.
+- Selected specific columns to focus query results.
+- Used column aliases to make result headings easier to read.
+- Retrieved a 10-row sample using `TOP 10`.
+- Created queries to view customer and order details, product prices and quantities, and order dates and delivery details.
+- Confirmed successful query execution in SSMS. Each of the three practical data-view queries returned 1,200 records.
+
+The queries in `sql/02-basic-sql-queries.sql` retrieve data only; they do not modify the source table.
