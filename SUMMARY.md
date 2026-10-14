@@ -23,10 +23,12 @@ sql-data-analysis/
 │       └── cleaned_dataset.csv
 ├── sql/
 │   ├── 01-creating-db__schema__data-insertion.sql
-│   └── 02-basic-sql-queries.sql
+│   ├── 02-basic-sql-queries.sql
+│   └── 03-filtering-and-sorting.sql
 ├── .gitignore
 ├── CHANGE_LOG.md
 ├── README.md
+├── requirements.txt
 └── SUMMARY.md
 ```
 
@@ -39,10 +41,10 @@ sql-data-analysis/
 
 ## Next Steps
 
-1. Filter records using `WHERE`.
-2. Sort query results using `ORDER BY`.
-3. Group and summarise records using `GROUP BY` and aggregate functions.
-4. Use `HAVING` and calculate percentage contributions.
+1. Group records using `GROUP BY`.
+2. Summarise data with aggregate functions such as `COUNT()`, `SUM()`, and `AVG()`.
+3. Use `HAVING` to filter grouped results.
+4. Calculate percentage contributions.
 5. Answer business questions and document the findings.
 6. Complete final quality checks and update the project documentation.
 
@@ -60,3 +62,19 @@ The `BULK INSERT` statement currently uses a local Windows path. Anyone running 
 - Confirmed successful query execution in SSMS. Each of the three practical data-view queries returned 1,200 records.
 
 The queries in `sql/02-basic-sql-queries.sql` retrieve data only; they do not modify the source table.
+
+## Completed Work — Task 4: Filtering and Sorting
+
+- Used `WHERE` with comparison operators such as `>`, `=`, `<`, and `>=`.
+- Combined conditions using `AND` and `OR`.
+- Used `LIKE` to find product names beginning with `P`.
+- Used `IN` to select records with specific order statuses and payment methods.
+- Used `BETWEEN` to filter order totals from 500 to 1,000, inclusive.
+- Used `ORDER BY` in ascending and descending order.
+- Used `TOP 10` with sorting to find the highest-value orders and earliest order dates.
+- Combined product, payment, status, price, and date conditions.
+- Added 15 exercises to `sql/03-filtering-and-sorting.sql`.
+
+The uploaded screenshots show successful execution of the individual queries. A fresh execution of the entire script should still be performed before final submission.
+
+The Task 4 queries retrieve records only. They do not modify the source table.

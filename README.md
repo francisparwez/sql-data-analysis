@@ -40,6 +40,24 @@ The script `sql/02-basic-sql-queries.sql` includes:
 
 The queries were executed successfully against `dbo.cleaned_dataset`. Each of the three practical data-view queries returned 1,200 records. These queries retrieve data only and do not modify the table.
 
+### Task 4 — Filtering and Sorting
+
+Created `sql/03-filtering-and-sorting.sql` to practise filtering records and sorting query results.
+
+The script includes:
+
+- Filtering order totals and unit prices with comparison operators.
+- Finding orders by quantity and combining conditions with `AND`.
+- Filtering payment methods with `OR` and `IN`.
+- Finding product names with `LIKE`.
+- Filtering order totals with `BETWEEN`.
+- Sorting the highest-value orders with `ORDER BY ... DESC`.
+- Sorting the earliest orders with `ORDER BY ... ASC`.
+- Combining status, payment method, product name, price, and date conditions.
+- Selecting orders from January 2024 using a start date and an exclusive end date.
+
+The script contains exercises numbered Task 4.1 to Task 4.15. The screenshots supplied during the work show successful execution of the individual queries, including 512 rows for Task 4.1, 664 rows for Task 4.4, 713 rows for Task 4.8's related status filter shown earlier, 305 rows for the `BETWEEN` query, 10 rows for the top-10 query, and 146 rows for Task 4.15. Result counts depend on the specific query and current dataset.
+
 ## Dataset
 
 The project uses the cleaned dataset carried forward from Project 2.
@@ -67,10 +85,12 @@ sql-data-analysis/
 │       └── cleaned_dataset.csv
 ├── sql/
 │   ├── 01-creating-db__schema__data-insertion.sql
-│   └── 02-basic-sql-queries.sql
+│   ├── 02-basic-sql-queries.sql
+│   └── 03-filtering-and-sorting.sql
 ├── .gitignore
 ├── CHANGE_LOG.md
 ├── README.md
+├── requirements.txt
 └── SUMMARY.md
 ```
 
@@ -81,17 +101,16 @@ sql-data-analysis/
 3. Review the file path in the `BULK INSERT` statement and update it to the location available to the SQL Server service account on your computer.
 4. Run the script in SSMS.
 5. Open `sql/02-basic-sql-queries.sql` to review and run the basic data retrieval queries.
+6. Open `sql/03-filtering-and-sorting.sql` to run the filtering and sorting exercises.
 
-**Note:** The current SQL script contains a machine-specific Windows file path. Update that path before running the script on another computer. The SQL Server service account must have permission to read the CSV file.
+**Note:** The current script contains a machine-specific Windows file path. Update that path before running the script on another computer. The SQL Server service account must have permission to read the CSV file.
 
-The database-creation statement will fail if a database with the same name already exists. If you rerun the script, check the database and table first to avoid duplicate imports.
+The database-creation statement will fail if a database with the same name already exists. If you rerun the script, check the database and table first to avoid duplicate imports. The filtering and sorting script reads data only; it does not update or delete records.
 
 ## Planned Work
 
 The next stages will build on the imported table and cover the remaining SQL analysis requirements for this project:
 
-- Filtering with `WHERE`
-- Sorting with `ORDER BY`
 - Grouping with `GROUP BY`
 - Aggregations using `COUNT()`, `SUM()`, and `AVG()`
 - Group-level filtering with `HAVING`
