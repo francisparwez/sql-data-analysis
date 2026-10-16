@@ -2,22 +2,22 @@
 
 This file records the work completed in Project 3 — SQL Data Analysis.
 
-## Project 3 — SQL Data Analysis
-
-| Change ID | Area                  | Change                                                                                                                                                                   | Reason                                                                                    | Status    |
-| --------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- | --------- |
-| SQL001    | Project setup         | Created the `sql-data-analysis` project structure with `data/input/` and `sql/` folders.                                                                                 | To keep the dataset and SQL scripts organised.                                            | Completed |
-| SQL002    | Input dataset         | Exported the cleaned Project 2 dataset to `data/input/cleaned_dataset.csv`.                                                                                              | To import the cleaned data into SQL Server using `BULK INSERT`.                           | Completed |
-| SQL003    | Database and table    | Created the `Project3_SQL_Data_Analysis` database and `dbo.cleaned_dataset` table with 14 columns.                                                                       | To prepare a SQL Server table for analysis.                                               | Completed |
-| SQL004    | Data import           | Imported the CSV into `dbo.cleaned_dataset`; SQL Server reported 1,200 rows affected.                                                                                    | To make the dataset available for SQL queries.                                            | Completed |
-| SQL005    | Initial validation    | Added queries to count and preview records, inspect the table structure, check duplicate and missing `OrderID` values, and validate `TotalPrice`.                        | To perform initial checks after importing the data.                                       | Completed |
-| SQL006    | Basic SQL queries     | Created `sql/02-basic-sql-queries.sql` with `SELECT *`, selected columns, column aliases, `TOP 10`, and queries for customer/order, product/price, and delivery details. | To practise retrieving and presenting selected data from the existing table.              | Completed |
-| SQL007    | Filtering and sorting | Created `sql/03-filtering-and-sorting.sql` with 15 exercises covering comparison operators, `WHERE`, `AND`, `OR`, `LIKE`, `IN`, `BETWEEN`, date filters, and `ORDER BY`. | To practise selecting specific records and sorting results to answer practical questions. | Completed |
+| Change ID | Area                             | Change                                                                                                                                  | Reason                                                                   | Status    |
+| --------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ | --------- |
+| SQL001    | Project setup                    | Created the project structure for SQL analysis.                                                                                         | To keep data, scripts, and documentation organised.                      | Completed |
+| SQL002    | Input dataset                    | Exported the cleaned Project 2 dataset to `data/input/cleaned_dataset.csv`.                                                             | To load the data into SQL Server.                                        | Completed |
+| SQL003    | Database and table               | Created the `Project3_SQL_Data_Analysis` database and `dbo.cleaned_dataset` table with 14 columns.                                      | To prepare the data for analysis.                                        | Completed |
+| SQL004    | Data import                      | Imported the CSV into `dbo.cleaned_dataset`; SQL Server reported 1,200 rows affected.                                                   | To make the data available for queries.                                  | Completed |
+| SQL005    | Initial validation               | Added checks for row count, table structure, duplicate and missing `OrderID` values, and the `TotalPrice` calculation.                  | To check the imported data before analysis.                              | Completed |
+| SQL006    | Basic SQL queries                | Added `02-basic-sql-queries.sql` with selected columns, aliases, `TOP 10`, and practical data-view queries.                             | To practise retrieving relevant records.                                 | Completed |
+| SQL007    | Filtering and sorting            | Added `03-filtering-and-sorting.sql` with 15 filtering and sorting exercises.                                                           | To practise narrowing down and ordering results.                         | Completed |
+| SQL008    | Aggregate functions and grouping | Added `04-aggregate-functions-and-grouping.sql` with Tasks 5.1–5.26 using aggregate functions, `GROUP BY`, `HAVING`, and date grouping. | To summarise orders, quantities, prices, and sales by useful categories. | Completed |
+| SQL009    | Documentation                    | Updated the README and summary to describe Task 5 and record results visible in the supplied screenshots.                               | To keep the documentation aligned with the work completed.               | Completed |
 
 ## Notes
 
-The current SQL script contains a machine-specific file path for `BULK INSERT`. Update it before running the script on another computer. The initial validation queries are included in the setup script; record their individual results only after reviewing their outputs.
-
-The basic queries in `sql/02-basic-sql-queries.sql` retrieve data only and do not modify the table. The three practical data-view queries each return 1,200 records when run against the current dataset.
-
-The filtering and sorting queries in `sql/03-filtering-and-sorting.sql` also read data only. Screenshots show successful execution of individual queries; run the full script once more before final submission to confirm that all batches execute successfully in sequence.
+- The SQL scripts use `dbo.cleaned_dataset` in the `Project3_SQL_Data_Analysis` database.
+- The aggregation script contains read-only `SELECT` queries. It does not update or delete table records.
+- The earlier data-import script may use a computer-specific Windows path in `BULK INSERT`. Update the path and check SQL Server service-account permissions before running it on another computer.
+- The results recorded here are based on screenshots supplied during development. Run the complete script once more before final submission to confirm all batches execute successfully in sequence.
+- The source data does not specify a currency, so sales values are not assigned a currency symbol.

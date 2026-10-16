@@ -78,3 +78,25 @@ The queries in `sql/02-basic-sql-queries.sql` retrieve data only; they do not mo
 The uploaded screenshots show successful execution of the individual queries. A fresh execution of the entire script should still be performed before final submission.
 
 The Task 4 queries retrieve records only. They do not modify the source table.
+
+## Completed Work — Task 5: Aggregate Functions and Grouping
+
+- Added `sql/04-aggregate-functions-and-grouping.sql` with Tasks 5.1–5.26.
+- Used `COUNT()`, `SUM()`, `AVG()`, `MIN()`, and `MAX()` to summarise the order data.
+- Used `GROUP BY` to compare results by product, payment method, order status, year, month, and combinations of fields.
+- Used `HAVING` to filter grouped results and `COUNT(DISTINCT ...)` to count unique products.
+- Used `YEAR()` and `MONTH()` to summarise order activity over time.
+- The screenshots show 1,200 total orders and total quantity of 3,535.
+- Product sales were highest for Chair (195,620.11), closely followed by Printer (195,612.61) and Laptop (192,126.56).
+- Online was the most common payment method with 258 orders.
+- The yearly order counts shown were 510 for 2023, 459 for 2024, and 231 for 2025.
+- The overall average order value was approximately 1,053.97, with a minimum of 11.39 and maximum of 3,456.40.
+
+The aggregate script uses read-only `SELECT` queries. Sales values are shown without a currency symbol because the dataset does not specify a currency.
+
+## Next Steps
+
+1. Review the remaining project requirements and confirm which tasks are still outstanding.
+2. Run the SQL scripts from beginning to end in SSMS and resolve any errors.
+3. Confirm that the documented file paths match the actual repository structure.
+4. Update the documentation again only when additional tasks are completed.

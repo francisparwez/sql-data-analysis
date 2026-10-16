@@ -58,6 +58,24 @@ The script includes:
 
 The script contains exercises numbered Task 4.1 to Task 4.15. The screenshots supplied during the work show successful execution of the individual queries, including 512 rows for Task 4.1, 664 rows for Task 4.4, 713 rows for Task 4.8's related status filter shown earlier, 305 rows for the `BETWEEN` query, 10 rows for the top-10 query, and 146 rows for Task 4.15. Result counts depend on the specific query and current dataset.
 
+### Task 5 — Aggregate Functions and Grouping
+
+Created `sql/04-aggregate-functions-and-grouping.sql` with Tasks 5.1 to 5.26. The queries use `COUNT()`, `SUM()`, `AVG()`, `MIN()`, `MAX()`, `GROUP BY`, `HAVING`, `COUNT(DISTINCT ...)`, and date functions such as `YEAR()` and `MONTH()`.
+
+The exercises summarise order counts, quantities, order values, and total sales by product, payment method, order status, year, and month. They also compare grouped results and filter groups using `HAVING`. The script begins by selecting the project database, checking the record count, and previewing a few records. The aggregation queries are read-only `SELECT` statements.
+
+The screenshots supplied during the task show the following results:
+
+- There are 1,200 records in the table.
+- Product order counts: Printer 181, Tablet 179, Chair 178, Laptop 173, Desk 170, Monitor 163, and Phone 156.
+- Total quantity by product: Chair 562, Printer 542, Laptop 535, Desk 508, Tablet 497, Monitor 480, and Phone 411.
+- Total sales by product: Chair 195,620.11; Printer 195,612.61; Laptop 192,126.56; Tablet 186,568.95; Monitor 175,651.41; Desk 167,459.93; Phone 151,722.39.
+- Online is the most common payment method, with 258 orders.
+- The yearly summary shows 510 orders in 2023, 459 in 2024, and 231 in 2025.
+- The overall summary shows 1,200 orders, total quantity 3,535, average order value approximately 1,053.97, minimum order value 11.39, and maximum order value 3,456.40.
+
+These are descriptive results from this dataset. The source data does not specify a currency, so no currency symbol is assigned to the sales values.
+
 ## Dataset
 
 The project uses the cleaned dataset carried forward from Project 2.
@@ -102,6 +120,7 @@ sql-data-analysis/
 4. Run the script in SSMS.
 5. Open `sql/02-basic-sql-queries.sql` to review and run the basic data retrieval queries.
 6. Open `sql/03-filtering-and-sorting.sql` to run the filtering and sorting exercises.
+7. Open `sql/04-aggregate-functions-and-grouping.sql` to run the aggregate-function and grouping exercises.
 
 **Note:** The current script contains a machine-specific Windows file path. Update that path before running the script on another computer. The SQL Server service account must have permission to read the CSV file.
 
@@ -109,14 +128,7 @@ The database-creation statement will fail if a database with the same name alrea
 
 ## Planned Work
 
-The next stages will build on the imported table and cover the remaining SQL analysis requirements for this project:
-
-- Grouping with `GROUP BY`
-- Aggregations using `COUNT()`, `SUM()`, and `AVG()`
-- Group-level filtering with `HAVING`
-- Percentage contribution calculations
-- Business questions and interpretation of query results
-- Final query review and project documentation
+The project has now progressed through aggregate functions and grouping. The next work is to review the remaining project requirements, confirm which tasks are still outstanding, rerun the SQL scripts for a final check, and keep the documentation aligned with the completed work.
 
 ## Internship
 
