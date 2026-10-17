@@ -76,6 +76,25 @@ The screenshots supplied during the task show the following results:
 
 These are descriptive results from this dataset. The source data does not specify a currency, so no currency symbol is assigned to the sales values.
 
+### Task 6 — Advanced Grouped Analysis
+
+Created `sql/05-advanced-grouped-analysis.sql` to practise `HAVING`, filtering records before grouping, and calculating percentage contributions for products and payment methods.
+
+The script includes:
+
+- Finding products with more than a specified number of orders.
+- Filtering individual orders with `WHERE` before grouping, then using `HAVING` to keep groups that meet a threshold.
+- Calculating each product's share of total sales and total quantity sold.
+- Comparing payment methods by order count, total sales, average order value, and sales contribution.
+- Summarising orders by status and by product/status combinations.
+- Producing an overall summary of orders, products, payment methods, quantities, and order values.
+
+The supplied SSMS screenshots show successful execution. The overall summary returned 1,200 orders, 7 products, 5 payment methods, total quantity sold of 3,535, total sales of 1,264,761.96, an average order value of 1,053.97, a minimum order value of 11.39, and a maximum order value of 3,456.40.
+
+For payment methods with sales above 250,000, Credit Card contributed 20.86% of total dataset sales, Online 20.75%, and Cash 20.54%. These percentages use total sales for the full dataset as the denominator.
+
+The source does not specify a currency, so no currency symbol is assigned. The script uses read-only `SELECT` queries and does not update or delete table records.
+
 ## Dataset
 
 The project uses the cleaned dataset carried forward from Project 2.
@@ -104,7 +123,9 @@ sql-data-analysis/
 ├── sql/
 │   ├── 01-creating-db__schema__data-insertion.sql
 │   ├── 02-basic-sql-queries.sql
-│   └── 03-filtering-and-sorting.sql
+│   ├── 03-filtering-and-sorting.sql
+│   ├── 04-aggregate-functions-and-grouping.sql
+│   └── 05-advanced-grouped-analysis.sql
 ├── .gitignore
 ├── CHANGE_LOG.md
 ├── README.md
@@ -121,6 +142,7 @@ sql-data-analysis/
 5. Open `sql/02-basic-sql-queries.sql` to review and run the basic data retrieval queries.
 6. Open `sql/03-filtering-and-sorting.sql` to run the filtering and sorting exercises.
 7. Open `sql/04-aggregate-functions-and-grouping.sql` to run the aggregate-function and grouping exercises.
+8. Open `sql/05-advanced-grouped-analysis.sql` to practise advanced grouped analysis and percentage contributions.
 
 **Note:** The current script contains a machine-specific Windows file path. Update that path before running the script on another computer. The SQL Server service account must have permission to read the CSV file.
 
@@ -128,7 +150,7 @@ The database-creation statement will fail if a database with the same name alrea
 
 ## Planned Work
 
-The project has now progressed through aggregate functions and grouping. The next work is to review the remaining project requirements, confirm which tasks are still outstanding, rerun the SQL scripts for a final check, and keep the documentation aligned with the completed work.
+The project has now progressed through advanced grouped analysis. The next work is to review the remaining project requirements, confirm which tasks are still outstanding, rerun the SQL scripts for a final check, and keep the documentation aligned with the completed work.
 
 ## Internship
 

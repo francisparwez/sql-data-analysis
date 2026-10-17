@@ -13,11 +13,13 @@ This file records the work completed in Project 3 — SQL Data Analysis.
 | SQL007    | Filtering and sorting            | Added `03-filtering-and-sorting.sql` with 15 filtering and sorting exercises.                                                           | To practise narrowing down and ordering results.                         | Completed |
 | SQL008    | Aggregate functions and grouping | Added `04-aggregate-functions-and-grouping.sql` with Tasks 5.1–5.26 using aggregate functions, `GROUP BY`, `HAVING`, and date grouping. | To summarise orders, quantities, prices, and sales by useful categories. | Completed |
 | SQL009    | Documentation                    | Updated the README and summary to describe Task 5 and record results visible in the supplied screenshots.                               | To keep the documentation aligned with the work completed.               | Completed |
+| SQL010    | Advanced grouped analysis        | Added `05-advanced-grouped-analysis.sql` with `HAVING`, combined filtering and grouping, and sales/quantity contribution percentages.   | To compare category-level performance and document the results.          | Completed |
 
 ## Notes
 
 - The SQL scripts use `dbo.cleaned_dataset` in the `Project3_SQL_Data_Analysis` database.
-- The aggregation script contains read-only `SELECT` queries. It does not update or delete table records.
+- The aggregation scripts contain read-only `SELECT` queries. They do not update or delete table records.
+- Task 6 added `sql/05-advanced-grouped-analysis.sql` for `HAVING`, filtered aggregation, and sales and quantity contribution percentages. The supplied screenshots show successful execution and an overall summary of 1,200 orders, total quantity of 3,535, and total sales of 1,264,761.96.
 - The earlier data-import script may use a computer-specific Windows path in `BULK INSERT`. Update the path and check SQL Server service-account permissions before running it on another computer.
 - The results recorded here are based on screenshots supplied during development. Run the complete script once more before final submission to confirm all batches execute successfully in sequence.
 - The source data does not specify a currency, so sales values are not assigned a currency symbol.

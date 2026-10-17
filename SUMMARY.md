@@ -24,7 +24,9 @@ sql-data-analysis/
 ├── sql/
 │   ├── 01-creating-db__schema__data-insertion.sql
 │   ├── 02-basic-sql-queries.sql
-│   └── 03-filtering-and-sorting.sql
+│   ├── 03-filtering-and-sorting.sql
+│   ├── 04-aggregate-functions-and-grouping.sql
+│   └── 05-advanced-grouped-analysis.sql
 ├── .gitignore
 ├── CHANGE_LOG.md
 ├── README.md
@@ -38,15 +40,6 @@ sql-data-analysis/
 - SQL Server Management Studio (SSMS)
 - T-SQL
 - CSV
-
-## Next Steps
-
-1. Group records using `GROUP BY`.
-2. Summarise data with aggregate functions such as `COUNT()`, `SUM()`, and `AVG()`.
-3. Use `HAVING` to filter grouped results.
-4. Calculate percentage contributions.
-5. Answer business questions and document the findings.
-6. Complete final quality checks and update the project documentation.
 
 ## Important Note
 
@@ -93,6 +86,20 @@ The Task 4 queries retrieve records only. They do not modify the source table.
 - The overall average order value was approximately 1,053.97, with a minimum of 11.39 and maximum of 3,456.40.
 
 The aggregate script uses read-only `SELECT` queries. Sales values are shown without a currency symbol because the dataset does not specify a currency.
+
+## Completed Work — Task 6: Advanced Grouped Analysis
+
+- Added `sql/05-advanced-grouped-analysis.sql`.
+- Used `HAVING` to keep groups that meet an order-count or sales threshold.
+- Combined `WHERE` with `GROUP BY` to filter records before calculating grouped results.
+- Calculated each product's share of total sales and total quantity sold.
+- Compared payment methods by order count, total sales, average order value, and sales contribution.
+- Summarised orders by status and by product/status combinations.
+- The supplied SSMS screenshots show successful execution.
+- The overall summary returned 1,200 orders, 7 products, 5 payment methods, total quantity sold of 3,535, total sales of 1,264,761.96, average order value of 1,053.97, minimum order value of 11.39, and maximum order value of 3,456.40.
+- For payment methods with sales above 250,000, contribution to total dataset sales was Credit Card 20.86%, Online 20.75%, and Cash 20.54%.
+
+The source does not specify a currency, so sales values are shown without a currency symbol. The script uses read-only `SELECT` queries and does not modify the table.
 
 ## Next Steps
 
