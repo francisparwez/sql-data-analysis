@@ -111,9 +111,19 @@ The script covers seven questions:
 
 The queries use aggregation, grouping, sorting, date functions, and `TOP 10` to compare products, payment methods, annual sales, order statuses, and high-value orders. Each question includes an insight and a short business interpretation.
 
-The results show that Chair had the highest total sales and recorded quantity sold. Credit Card generated the highest total sales among payment methods, while Online had the highest order count. Annual sales totals decreased from 2023 to 2025, although the date coverage for 2025 should be checked before making a full-year comparison.
+The results show that Chair had the highest total sales and recorded quantity sold. Credit Card generated the highest total sales among payment methods, while Online had the highest order count. Annual sales totals decreased across the recorded years. However, the 2025 data only covers the period from January to June, so its total should not be compared directly with full-year totals for 2023 and 2024.
 
 The analysis also shows that Cancelled orders had the highest record count. Cancelled and returned order values should be checked before treating them as completed sales. These findings describe the available data and do not establish profitability or the causes behind the results.
+
+### Task 8 — Final Presentation and Quality
+
+Created `sql/07-final-validation-and-quality-checks.sql` for the final checks before submission.
+
+The script checks the record count, number of columns, missing and duplicate `OrderID` values, whether `TotalPrice` matches `Quantity * UnitPrice`, and the earliest and latest order dates.
+
+The supplied SSMS screenshots show 1,200 records, 14 columns, no missing `OrderID` values, no duplicate `OrderID` values returned, and no price mismatches returned. The recorded order-date range is 2023-01-01 to 2025-06-30.
+
+These checks support the final review of the imported dataset. Run the full script again before submission to confirm the results in your own SQL Server session.
 
 ## Dataset
 
@@ -146,7 +156,8 @@ sql-data-analysis/
 │   ├── 03-filtering-and-sorting.sql
 │   ├── 04-aggregate-functions-and-grouping.sql
 │   ├── 05-advanced-grouped-analysis.sql
-│   └── 06-business-questions-and-insights.sql
+│   ├── 06-business-questions-and-insights.sql
+│   └── 07-final-validation-and-quality-checks.sql
 ├── .gitignore
 ├── CHANGE_LOG.md
 ├── README.md
@@ -165,14 +176,11 @@ sql-data-analysis/
 7. Open `sql/04-aggregate-functions-and-grouping.sql` to run the aggregate-function and grouping exercises.
 8. Open `sql/05-advanced-grouped-analysis.sql` to practise advanced grouped analysis and percentage contributions.
 9. Open `sql/06-business-questions-and-insights.sql` to review the business questions and findings.
+10. Open `sql/07-final-validation-and-quality-checks.sql` to run the final data-quality checks.
 
 **Note:** The current script contains a machine-specific Windows file path. Update that path before running the script on another computer. The SQL Server service account must have permission to read the CSV file.
 
 The database-creation statement will fail if a database with the same name already exists. If you rerun the script, check the database and table first to avoid duplicate imports. The filtering and sorting script reads data only; it does not update or delete records.
-
-## Planned Work
-
-The project has progressed through business questions and insights. The next work is to review the remaining project requirements, run the SQL scripts for a final check, and keep the documentation aligned with the completed work.
 
 ## Internship
 

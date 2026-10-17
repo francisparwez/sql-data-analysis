@@ -27,7 +27,8 @@ sql-data-analysis/
 │   ├── 03-filtering-and-sorting.sql
 │   ├── 04-aggregate-functions-and-grouping.sql
 │   ├── 05-advanced-grouped-analysis.sql
-│   └── 06-business-questions-and-insights.sql
+│   ├── 06-business-questions-and-insights.sql
+│   └── 07-final-validation-and-quality-checks.sql
 ├── .gitignore
 ├── CHANGE_LOG.md
 ├── README.md
@@ -118,11 +119,16 @@ The results show 1,200 records, seven products, five payment methods, total quan
 
 Chair had the highest total sales and recorded quantity sold. Credit Card generated the highest total sales among payment methods, while Online had the highest order count. Cancelled orders had the highest record count among the five statuses.
 
-Annual sales totals decreased from 2023 to 2025. The date coverage for 2025 should be checked before comparing it directly with earlier years. Sales values include all recorded order statuses and should not automatically be treated as completed revenue or profit.
+Annual sales totals decreased across the recorded years. However, the 2025 data only covers the period from January to June, so its total should not be compared directly with full-year totals for 2023 and 2024. Sales values include all recorded order statuses and should not automatically be treated as completed revenue or profit.
 
-## Next Steps
+## Completed Work — Task 8: Final Presentation and Quality
 
-1. Review the remaining project requirements and confirm which tasks are still outstanding.
-2. Run the SQL scripts from beginning to end in SSMS and resolve any errors.
-3. Confirm that the documented file paths match the actual repository structure.
-4. Update the documentation again only when additional tasks are completed.
+- Added `sql/07-final-validation-and-quality-checks.sql` for the final data-quality review.
+- Checked the total record count and number of columns.
+- Checked for missing and duplicate `OrderID` values.
+- Checked whether `TotalPrice` matches `Quantity * UnitPrice`.
+- Checked the earliest and latest order dates.
+- The supplied SSMS screenshots show 1,200 records and 14 columns, with no missing `OrderID` values, no duplicate IDs returned, and no price mismatches returned.
+- The recorded date range is 2023-01-01 to 2025-06-30.
+
+Run the full validation script again before submission to confirm that the results are reproduced in your SQL Server session.
