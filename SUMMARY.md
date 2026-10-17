@@ -26,7 +26,8 @@ sql-data-analysis/
 │   ├── 02-basic-sql-queries.sql
 │   ├── 03-filtering-and-sorting.sql
 │   ├── 04-aggregate-functions-and-grouping.sql
-│   └── 05-advanced-grouped-analysis.sql
+│   ├── 05-advanced-grouped-analysis.sql
+│   └── 06-business-questions-and-insights.sql
 ├── .gitignore
 ├── CHANGE_LOG.md
 ├── README.md
@@ -100,6 +101,24 @@ The aggregate script uses read-only `SELECT` queries. Sales values are shown wit
 - For payment methods with sales above 250,000, contribution to total dataset sales was Credit Card 20.86%, Online 20.75%, and Cash 20.54%.
 
 The source does not specify a currency, so sales values are shown without a currency symbol. The script uses read-only `SELECT` queries and does not modify the table.
+
+## Completed Work — Task 7: Business Questions and Insights
+
+- Added `sql/06-business-questions-and-insights.sql`.
+- Wrote seven business questions using the cleaned dataset.
+- Compared total sales and quantities across products.
+- Compared payment methods by order count, total sales, and average order value.
+- Summarised sales and order counts by year.
+- Compared order statuses using counts, total sales, and average order values.
+- Retrieved the ten highest-value recorded orders.
+- Created an overall summary of records, products, payment methods, quantities, and order values.
+- Added written insights and business interpretations to the SQL file.
+
+The results show 1,200 records, seven products, five payment methods, total quantity of 3,535, total recorded sales of 1,264,761.96, and an average order value of approximately 1,053.97.
+
+Chair had the highest total sales and recorded quantity sold. Credit Card generated the highest total sales among payment methods, while Online had the highest order count. Cancelled orders had the highest record count among the five statuses.
+
+Annual sales totals decreased from 2023 to 2025. The date coverage for 2025 should be checked before comparing it directly with earlier years. Sales values include all recorded order statuses and should not automatically be treated as completed revenue or profit.
 
 ## Next Steps
 

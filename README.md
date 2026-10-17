@@ -95,6 +95,26 @@ For payment methods with sales above 250,000, Credit Card contributed 20.86% of 
 
 The source does not specify a currency, so no currency symbol is assigned. The script uses read-only `SELECT` queries and does not update or delete table records.
 
+### Task 7 — Business Questions and Insights
+
+Created `sql/06-business-questions-and-insights.sql` to answer practical business questions using the cleaned dataset.
+
+The script covers seven questions:
+
+- **Task 7.1:** Which products generate the highest sales?
+- **Task 7.2:** Which products sell the highest quantities?
+- **Task 7.3:** Which payment methods generate the most sales?
+- **Task 7.4:** How do sales change by year?
+- **Task 7.5:** How do order statuses compare?
+- **Task 7.6:** Which orders have the highest sales values?
+- **Task 7.7:** What does the overall dataset tell us?
+
+The queries use aggregation, grouping, sorting, date functions, and `TOP 10` to compare products, payment methods, annual sales, order statuses, and high-value orders. Each question includes an insight and a short business interpretation.
+
+The results show that Chair had the highest total sales and recorded quantity sold. Credit Card generated the highest total sales among payment methods, while Online had the highest order count. Annual sales totals decreased from 2023 to 2025, although the date coverage for 2025 should be checked before making a full-year comparison.
+
+The analysis also shows that Cancelled orders had the highest record count. Cancelled and returned order values should be checked before treating them as completed sales. These findings describe the available data and do not establish profitability or the causes behind the results.
+
 ## Dataset
 
 The project uses the cleaned dataset carried forward from Project 2.
@@ -125,7 +145,8 @@ sql-data-analysis/
 │   ├── 02-basic-sql-queries.sql
 │   ├── 03-filtering-and-sorting.sql
 │   ├── 04-aggregate-functions-and-grouping.sql
-│   └── 05-advanced-grouped-analysis.sql
+│   ├── 05-advanced-grouped-analysis.sql
+│   └── 06-business-questions-and-insights.sql
 ├── .gitignore
 ├── CHANGE_LOG.md
 ├── README.md
@@ -143,6 +164,7 @@ sql-data-analysis/
 6. Open `sql/03-filtering-and-sorting.sql` to run the filtering and sorting exercises.
 7. Open `sql/04-aggregate-functions-and-grouping.sql` to run the aggregate-function and grouping exercises.
 8. Open `sql/05-advanced-grouped-analysis.sql` to practise advanced grouped analysis and percentage contributions.
+9. Open `sql/06-business-questions-and-insights.sql` to review the business questions and findings.
 
 **Note:** The current script contains a machine-specific Windows file path. Update that path before running the script on another computer. The SQL Server service account must have permission to read the CSV file.
 
@@ -150,7 +172,7 @@ The database-creation statement will fail if a database with the same name alrea
 
 ## Planned Work
 
-The project has now progressed through advanced grouped analysis. The next work is to review the remaining project requirements, confirm which tasks are still outstanding, rerun the SQL scripts for a final check, and keep the documentation aligned with the completed work.
+The project has progressed through business questions and insights. The next work is to review the remaining project requirements, run the SQL scripts for a final check, and keep the documentation aligned with the completed work.
 
 ## Internship
 
